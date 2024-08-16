@@ -197,7 +197,7 @@ export default function Home() {
                     />
                     <div>
                       <h3>{product.name}</h3>
-                      <p>Price: ${product.price}</p>
+                      <p>Price: ₹{product.price}</p>
                       <button
                         onClick={() => handleAddToCart(index)}
                         className="form-button"
@@ -233,7 +233,7 @@ export default function Home() {
                       <h4>{item.name}</h4>
                     </div>
                     <div>
-                      <p>Price: ${item.price}</p>
+                      <p>Price: ₹{item.price}</p>
                       <button
                         onClick={() =>
                           setCart(cart.filter((_, i) => i !== index))
@@ -247,7 +247,7 @@ export default function Home() {
                 ))}
               </div>
               <h3>
-                Total: ${cart.reduce((total, item) => total + item.price, 0)}
+                Total: ₹{cart.reduce((total, item) => total + item.price, 0)}
               </h3>
               <button
                 id="checkout-btn"
